@@ -21,7 +21,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-//LOGIN
+//login
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
     const accessToken = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
       process.env.SECRET_KEY,
-      { expiresIn: "5d" }
+      { expiresIn: "365d" }
     );
 
     const { password, ...info } = user._doc;
