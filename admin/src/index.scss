@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+$width-sidebar: 16%;
+$width-sidebar-tablet: 23%;
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet-pro {
+  @media (max-width: 820px) {
+    @content;
+  }
+}
+.container {
+  display: flex;
+  &__left {
+    width: $width-sidebar;
+    @include tablet-pro {
+      width: $width-sidebar-tablet;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --main-color: #0b0b0b;
+  overflow-x: hidden;
+}

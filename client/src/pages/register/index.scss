@@ -1,0 +1,114 @@
+@import "../../index.scss";
+
+.register {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 100%
+    ),
+    url("https://res.cloudinary.com/ductai2982/image/upload/v1661285854/netflix/VN-vi-20220815-popsignuptwoweeks-perspective_alpha_website_medium_sta2um.jpg");
+  background-size: cover;
+
+  &__top {
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      height: 50px;
+    }
+
+    .loginButton {
+      background-color: rgba(255, 21, 21, 0.8);
+      border: none;
+      color: rgb(255, 255, 255);
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(255, 21, 21);
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    h1 {
+      font-size: 50px;
+      @include tablet {
+        font-size: 30px;
+      }
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    h2 {
+      margin: 20px;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    .input {
+      width: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      height: 50px;
+      border-radius: 10px;
+
+      input {
+        flex: 9;
+        height: 100%;
+        font-size: 16px;
+        border: none;
+        padding: 0 10px;
+        border-right: 1px solid #555;
+      }
+
+      .registerButton {
+        flex: 3;
+        height: 100%;
+        background-color: rgba(255, 0, 0, 0.8);
+        border: none;
+        color: white;
+        font-size: 20px;
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 6px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(255, 0, 0);
+        }
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

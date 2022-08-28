@@ -1,0 +1,85 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("https://res.cloudinary.com/ductai2982/image/upload/v1661285854/netflix/VN-vi-20220815-popsignuptwoweeks-perspective_alpha_website_medium_sta2um.jpg");
+  background-size: cover;
+  position: relative;
+
+  &__top {
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      height: 50px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      width: 350px;
+      height: 350px;
+      padding: 30px;
+      border-radius: 6px;
+      background-color: var(--main-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      input {
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgb(108, 108, 108);
+        color: rgb(255, 255, 255);
+        padding-left: 10px;
+        font-size: 16px;
+        
+        &::placeholder {
+          color: #ccc;
+        }
+      }
+
+      button {
+        height: 44px;
+        border-radius: 6px;
+        background-color: red;
+        color: rgb(255, 255, 255);
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      span {
+        color: #ccc;
+
+        .signup {
+          margin-bottom: 2px;
+          border-bottom: 1px solid #ccc;
+          color: rgb(255, 251, 0);
+        }
+      }
+    }
+  }
+}

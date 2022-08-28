@@ -1,66 +1,109 @@
-.movies{
-    width: 100%;
-    padding: 20px;
+.movies {
+  width: 100%;
+  padding: 20px;
 
-    &__title {
-        text-decoration: none;
+  &__header {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
-        &-add {
-            align-self: center;
-            border: none;
-            padding: 8px 10px;
-            background-color: rgb(188, 255, 199);
-            color: rgb(0, 0, 0);
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 0 0px 20px 50px;
-            display: flex;
-            align-items: center;
+  &__title {
+    display: flex;
+    justify-content: right;
 
-            svg{
-                font-size: 16px;
-                margin-right: 5px;
-            }
-        }
+    &-btn {
+      text-decoration: none;
     }
 
-    &__item{
-        display: flex;
-        align-items: center;
-        
-        &-img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 10px;
-        }
+    &-add {
+      border: none;
+      padding: 8px 14px;
+      background-color: rgba(13, 255, 0, 0.7);
+      color: rgb(0, 0, 0);
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px 50px 20px 0px;
     }
+  }
 
-    &__set{
-        display: flex;
-        align-items: center;
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-edit {
+      color: green;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      margin-right: 16px;
+      padding: 0;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      svg {
+        margin: 18px 0 0;
         font-size: 20px;
-        margin-left: 10px;
-
-        &-edit{
-            color: rgb(251, 255, 0);
-            cursor: pointer;
-            border: none;
-            background-color: transparent;
-            margin-right: 25px;
-        }
-        
-        &-delete{
-            color: rgb(255, 0, 0);
-            cursor: pointer;
-        }
+      }
     }
 
+    &-delete {
+      color: rgb(255, 0, 0);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+      svg {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__action1 {
+    margin-left: 16px;
+
+    &-edit {
+      color: green;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      svg {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    &_img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+  }
 }
-
-
-
-
-

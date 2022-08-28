@@ -1,0 +1,79 @@
+.addList {
+  width: 100%;
+  padding: 20px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__form {
+    padding: 20px 50px;
+
+    &--main {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 43%;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 43%;
+    }
+
+    &--item {
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+
+      & > label {
+        color: rgb(255, 0, 0);
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        margin-left: 6px;
+      }
+
+      & > input {
+        font-size: 16px;
+        padding: 8px;
+        color: #333;
+      }
+
+      & > select {
+        padding: 8px;
+      }
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--btn {
+      font-size: 16px;
+      margin-top: 20px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(13, 255, 0, 0.7);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;&:hover {
+        background-color: rgb(13, 255, 0);
+      }
+    }
+  }
+}

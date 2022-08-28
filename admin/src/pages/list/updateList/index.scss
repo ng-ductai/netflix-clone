@@ -1,0 +1,56 @@
+.edit {
+  width: 100%;
+  padding: 20px;
+
+  &__title {
+    padding-left: 160px;
+    padding-bottom: 15px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  &__container {
+    padding: 24px 30px;
+    width: 500px;
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+
+      & > label {
+        font-size: 20px;
+        color: rgb(255, 0, 0);
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      & > input,
+      & > select {
+        margin-bottom: 15px;
+        font-size: 16px;
+        padding: 8px;
+        border: 1px solid gray;
+      }
+    }
+
+    &_update {
+      display: flex;
+      justify-content: center;
+      &-btn {
+        margin-top: 16px;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        background-color: rgba(13, 255, 0, 0.7);
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(13, 255, 0);
+        }
+      }
+    }
+  }
+}

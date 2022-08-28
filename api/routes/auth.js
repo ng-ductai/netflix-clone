@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require("../models/User");
+const User = require("../models/user");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 
@@ -8,6 +8,10 @@ router.post("/register", async (req, res) => {
   const newUser = new User({
     username: req.body.username,
     email: req.body.email,
+    isAdmin: req.body.isAdmin ? req.body.isAdmin : false,
+    profilePic: req.body.img
+      ? req.body.img
+      : "https://res.cloudinary.com/ductai2982/image/upload/v1661289138/netflix/t%E1%BA%A3i_xu%E1%BB%91ng_imiib2.jpg",
     password: CryptoJS.AES.encrypt(
       req.body.password,
       process.env.SECRET_KEY

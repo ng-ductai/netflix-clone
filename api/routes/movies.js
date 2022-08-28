@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Movie = require("../models/Movie");
+const Movie = require("../models/movie");
 const verify = require("../verifyToken");
 
 //CREATE
@@ -18,17 +18,47 @@ router.post("/", verify, async (req, res) => {
 });
 
 //UPDATE
-router.put("/:id", verify, async (req, res) => {
+router.put("/update", verify, async (req, res) => {
   if (req.user.isAdmin) {
+    console.log("fg", req.body);
+    const {
+      _id,
+      title,
+      desc,
+      year,
+      genre,
+      limit,
+      imgSm,
+      trailer,
+      img,
+      video,
+      isSeries,
+    } = req.body;
+
+    const value = {
+      title,
+      desc,
+      year,
+      genre,
+      limit,
+      imgSm,
+      trailer,
+      img,
+      video,
+      isSeries,
+    };
+
     try {
-      const updatedMovie = await Movie.findByIdAndUpdate(
-        req.params.id,
+      await Movie.updateOne(
         {
-          $set: req.body,
+          _id: _id,
         },
-        { new: true }
+        {
+          $set: { ...value },
+          $currentDate: { lastModified: true },
+        }
       );
-      res.status(200).json(updatedMovie);
+      res.status(200).json("sucess");
     } catch (err) {
       res.status(500).json(err);
     }
@@ -61,7 +91,7 @@ router.get("/find/:id", verify, async (req, res) => {
   }
 });
 
-//GET RANDOM
+//GET RANDOM BANNER
 router.get("/random", verify, async (req, res) => {
   const type = req.query.type;
   let movie;
@@ -85,15 +115,24 @@ router.get("/random", verify, async (req, res) => {
 
 //GET ALL
 router.get("/", verify, async (req, res) => {
-  if (req.user.isAdmin) {
-    try {
-      const movies = await Movie.find();
-      res.status(200).json(movies.reverse());
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  } else {
-    res.status(403).json("You are not allowed!");
+  try {
+    const movies = await Movie.find();
+    res.status(200).json(movies.reverse());
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// GET RECENTLY
+router.get("/recently", verify, async (req, res) => {
+  try {
+    const movies = await Movie.aggregate([
+      { $sort: { createdAt: -1, _id: -1 } },
+      { $limit: 15 },
+    ]);
+    res.status(200).json(movies);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

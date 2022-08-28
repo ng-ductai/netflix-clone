@@ -1,0 +1,72 @@
+.header {
+  width: 100%;
+  background-color: rgb(171, 215, 254);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  &__wrapper {
+    height: 100%;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_left {
+      &-logo {
+        font-weight: bold;
+        font-size: 32px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+
+    &_right {
+      display: flex;
+      align-items: center;
+
+      &-icon {
+        position: relative;
+        cursor: pointer;
+        margin-right: 10px;
+        color: #555;
+        &:hover {
+          color: rgb(0, 0, 0);
+          transform: scale(1.05);
+        }
+
+        .iconBadge {
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          top: -5px;
+          right: 0px;
+          background-color: rgb(250, 55, 55);
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      &-name {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      &-avt {
+        margin-left: 16px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}

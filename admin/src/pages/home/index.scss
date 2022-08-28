@@ -1,12 +1,9 @@
-.home{
-    flex: 4;
+.home {
+  width: 100%;
 
-    &__widgets{
-        display: flex;
-        margin: 20px;
-        justify-content:space-between
-    }
-
-
+  &__widgets {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+  }
 }
-

@@ -1,0 +1,22 @@
+@import "../../index.scss";
+
+.recently {
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+
+    .main {
+      margin: 0 45px;
+      display: flex;
+      flex-wrap: wrap;
+      transform: translateX(0px);
+
+      @include tablet {
+        margin: 0 16px;
+      }
+    }
+  }
+}
