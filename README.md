@@ -21,7 +21,7 @@
     - Quản lý phim.
     - Quản lý người dùng.
 
-- ## Video demo: https://drive.google.com/file/d/1LaAsjlhubidibqxrlggdUTwWbxpC4KS0/view
+- ### Video demo: https://drive.google.com/file/d/1LaAsjlhubidibqxrlggdUTwWbxpC4KS0/view
 
 - ## Công nghệ
 
