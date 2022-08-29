@@ -10,6 +10,9 @@
     - Tìm kiếm phim theo thể loại.
     - Hiển thị thông tin chi tiết và xem trailer phim.
     - Hiển thị các bộ phim mới thêm.
+ 
+  ![Unt](https://user-images.githubusercontent.com/67097279/187234113-ed0c4ecd-26cb-4e42-83bd-a935d0ca78b6.png)
+
 
 - ## Trang dashboard
 
@@ -20,6 +23,9 @@
     - Quản lý danh sách phát.
     - Quản lý phim.
     - Quản lý người dùng.
+    
+  ![Untitled](https://user-images.githubusercontent.com/67097279/187234408-685ca9b6-3f7f-41eb-8aed-234815c0d9ac.png)
+
 
 - ### Video demo: https://drive.google.com/file/d/1LaAsjlhubidibqxrlggdUTwWbxpC4KS0/view
 
