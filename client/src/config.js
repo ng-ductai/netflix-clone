@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://netflix2982.herokuapp.com/api",
+  baseURL: "https://netflix-server.vercel.app/api",
 });
 
 export default axiosInstance;
